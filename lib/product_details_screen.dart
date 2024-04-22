@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class ProductDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,8 +13,8 @@ class ProductDetailsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(
-              'https://via.placeholder.com/300',
+            Image.asset('assets/852-00_1.jpg',
+              
               fit: BoxFit.cover,
               height: 300.0,
             ),
