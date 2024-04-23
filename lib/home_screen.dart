@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
+  final List<String> productImages = [
+    'assets/853-00_1.jpg',
+    'assets/900-00H-5123.jpg',
+    'assets/900-00H-2199.jpg',
+    'assets/900-00H-6102.png',
+    'assets/852-00_3.jpg',
+    'assets/900-00H-2194.jpg',
+    
+    
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +65,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisCount: 2,
           childAspectRatio: 0.7,
         ),
-        itemCount: 10,
+        itemCount: productImages.length,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
@@ -65,8 +76,8 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Image.network(
-                      'https://via.placeholder.com/150',
+                    child: Image.asset(
+                      productImages[index],
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -86,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                         Text(
                           '\$49.99',
                           style: TextStyle(
-                            color: Colors.grey[600],
+                            color: const Color.fromARGB(255, 126, 115, 115),
                             fontSize: 14.0,
                           ),
                         ),
